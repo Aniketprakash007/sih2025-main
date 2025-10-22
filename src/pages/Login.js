@@ -19,7 +19,7 @@ export default function Login() {
     setMsg("");
 
     try {
-      const res = await fetch("http://localhost:5000/api/auth/login", {
+      const res = await fetch("https://auth-backend-g59s.onrender.com/api/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
@@ -42,7 +42,7 @@ export default function Login() {
 
   const handleVerify = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/auth/verify", {
+     const res = await fetch("https://auth-backend-g59s.onrender.com/api/auth/verify", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, otp }),
