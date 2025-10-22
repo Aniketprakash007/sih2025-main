@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const API_URL = 'https://auth-backend-g59s.onrender.com'; // your backend
+const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5000";
+
 
 // Signup user with all fields
 export async function signupUser({ name, school, grade, location, email, password }) {
