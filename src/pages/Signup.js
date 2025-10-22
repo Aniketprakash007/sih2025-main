@@ -27,7 +27,7 @@ export default function Signup() {
     }
 
     try {
-      const res = await fetch("http://localhost:5000/api/auth/signup", {
+      const res = await fetch("https://auth-backend-g59s.onrender.com/api/auth/signup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, school, grade, location, email, password }),
@@ -55,7 +55,7 @@ export default function Signup() {
     }
 
     try {
-      const res = await fetch("http://localhost:5000/api/auth/verify", {
+      const res = await fetch("https://auth-backend-g59s.onrender.com/api/auth/verify", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, otp }),
